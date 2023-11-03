@@ -1,0 +1,237 @@
+.basket {
+  padding-top: 10px;
+}
+
+.basket__title {
+  @include font(28px, 36px, 700);
+  letter-spacing: -1%;
+}
+
+.basket__list {
+  margin-top: 27px;
+}
+
+.list__header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  padding-bottom: 16px;
+
+  label {
+    display: flex;
+    cursor: pointer;
+  }
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  
+  &:checked + .custom-checkbox::after {
+    background-image: url(../../assets/svg/checkbox-checked.svg);
+  }
+}
+
+.custom-checkbox::after {
+  content: '';
+  cursor: pointer;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background-image: url(../../assets/svg/checkbox-disabled.svg);
+}
+
+.list__text {
+  @include font(1.6rem, 2.4rem);
+  margin-left: 11px;
+}
+
+/* product item */
+
+.list__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.list__item {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 11px;
+
+  label {
+    height: 96px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.item__photo {
+  width: 72px;
+  height: 96px;
+  margin: 0 16px 0 12px;
+}
+
+.item__description {
+  width: 100%;
+  max-width: 543px;
+}
+
+.description__title {
+  @include font(1.6rem, 2.4rem);
+  max-width: 250px;
+  margin-bottom: 8px;
+}
+
+.description__additional {
+  display: flex;
+  column-gap: 16px;
+  margin: 8px 0;
+  @include font(1.3rem, 1.6rem);
+}
+
+.description__company {
+  @include font(1.3rem, 1.6rem);
+  color: rgb(151, 151, 175);
+}
+
+.company__name {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.company__info {
+  margin-left: 6px;
+}
+
+.item__count {
+  margin-right: 16px;
+  margin-top: -1px;
+}
+
+.count__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 44px;
+  border-radius: 8px;
+  background: $background-white;
+  margin-bottom: 9px;
+
+  .count__minus, .count__plus {
+    @include font(2rem, 2.4rem);
+    letter-spacing: -0.2px;
+    width: 24px;
+    padding: 2px 7px 6px 8px;
+  }
+
+  .count__minus {
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  .count__number {
+    @include font(1.6rem, 2.4rem);
+    display: inline-block;
+    width: 44px;
+    text-align: center;
+  }
+}
+
+.count__stock {
+  @include font(1.3rem, 1.6rem);
+  color: rgba(255, 59, 48, 1);
+  margin: 0 0 8px;
+}
+
+.count__buttons {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 16px;
+}
+
+.item__price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 110px;
+  height: 99px;
+  margin-top: -2px;
+}
+
+.price__main {
+  @include font(1.6rem, 2.4rem, 700);
+  margin-bottom: 5px;
+
+  .small-number {
+    @include font(1.6rem, 2.4rem, 700);
+  }
+
+  .large-number {
+    @include font(2rem, 2.8rem, 700);
+    letter-spacing: -0.2px;
+  }
+}
+
+.price__sale {
+  @include font(1.3rem, 1.6rem);
+  color: rgba(151, 151, 175, 1);
+  padding-bottom: 1px;
+  border-bottom: 1px dashed rgba(151, 151, 175, 1);
+  width: fit-content;
+  text-decoration: line-through;
+}
+
+/* miss list */
+
+.basket__miss-list {
+  padding: 36px 0 40px;
+}
+
+.miss-list__header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  padding-bottom: 17px;
+}
+
+.miss-list__text {
+  @include font(1.6rem, 2.4rem, 600);
+}
+
+.miss-list__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.miss-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 12px;
+
+  .item__photo {
+    margin: 0 16px 0 0;
+  }
+
+  .description__title {
+    max-width: 309px;
+  }
+
+  .item__description {
+    color: rgba(151, 151, 175, 1);
+  }
+
+  .item__count {
+    margin-right: 125px;
+  }
+
+  &:last-child {
+    padding-top: 4px;
+  }
+}
+

@@ -1,0 +1,38 @@
+export const products = [
+  {
+    name: 'Футболка UZcotton мужская',
+    color: 'белый',
+    size: 56,
+    company: 'OOO Вайлдберриз',
+    count: 1,
+    stock: 2,
+    price: '522',
+    sale: '1051',
+    photo: './assets/products/t-shirt.png',
+    darkPhoto: './assets/products/t-shirt-dark.png',
+  },
+  {
+    name: 'Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe',
+    color: 'прозрачный',
+    size: null,
+    company: 'OOO Мегапрофстиль',
+    count: 200,
+    stock: null,
+    price: '2 100 047',
+    sale: '2 300 047',
+    photo: './assets/products/case.png',
+    darkPhoto: './assets/products/case-dark.png',
+  },
+  {
+    name: 'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell',
+    color: null,
+    size: null,
+    company: 'OOO Вайлдберриз',
+    count: 2,
+    stock: 2,
+    price: '494',
+    sale: '950',
+    photo: './assets/products/pencils.png',
+    darkPhoto: './assets/products/pencils-dark.png',
+  }
+];

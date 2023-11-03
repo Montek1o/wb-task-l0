@@ -27,15 +27,57 @@
           <p class="icon-menu__text">Профиль</p>
         </div>
         <div class="icon-menu__item">
-          <div class="basket-count">3</div>
+          <div class="basket-count"><span>3</span></div>
           <img class="basket-icon" src="./assets/svg/basket.svg" alt="basket-icon">
           <p class="icon-menu__text">Корзина</p>
         </div>
       </div> 
     </div>
   </header>
-  <main></main>
+  <main class="main">
+    <div class="wrapper main__wrapper">
+      <div class="main__left-column">
+        <section class="basket">
+          <h2 class="basket__title">Корзина</h2>
+          <div class="basket__list">
+            <div class="list__header">
+              <label>
+                <input class="list__checkbox checkbox" type="checkbox">
+                <span class="list__custom-checkbox custom-checkbox"></span>
+                <span class="list__text">Выбрать все</span>
+              </label>
+              <img src="./assets/svg/arrow.svg" alt="arrow">
+            </div>
+            <div class="list__body">
+            </div>
+          </div>
+          <div class="basket__miss-list">
+            <div class="miss-list__header">
+              <span class="miss-list__text">Отсутствуют · 3 товара</span>
+              <img src="./assets/svg/arrow.svg" alt="arrow">
+            </div>
+            <div class="miss-list__body">
+            </div>
+          </div>
+        </section>
+        <!-- <section class="delivery">
+          <h2 class="delivery__title">Способ доставки</h2>
+        </section>
+        <section class="pay">
+          <h2 class="pay__title">Способ оплаты</h2>
+        </section>
+        <section class="recipient">
+          <h2 class="recipient__title">Получатель</h2>
+        </section> -->
+      </div>
+      <div class="main__right-column">
+        <section class="total">
+          <h2 class="total__title">Итого</h2>
+        </section>
+      </div>
+    </div>
+  </main>
   <footer></footer>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>

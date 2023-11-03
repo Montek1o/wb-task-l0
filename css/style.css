@@ -14,6 +14,21 @@ html {
 
 body {
   font-family: "Segoe UI", sans-serif;
+  background-color: rgb(246, 246, 250);
+}
+
+.main__wrapper {
+  display: flex;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.main__left-column {
+  width: calc(66.6666666667% + 32px);
+}
+
+.main__right-column {
+  width: 33.3333333333%;
 }
 
 .burger {
@@ -29,6 +44,270 @@ body {
   height: 24px;
 }
 
+.basket {
+  padding-top: 10px;
+}
+
+.basket__title {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -1%;
+}
+
+.basket__list {
+  margin-top: 27px;
+}
+
+.list__header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 16px;
+}
+.list__header label {
+  display: flex;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.checkbox:checked + .custom-checkbox::after {
+  background-image: url(../../assets/svg/checkbox-checked.svg);
+}
+
+.custom-checkbox::after {
+  content: "";
+  cursor: pointer;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background-image: url(../../assets/svg/checkbox-disabled.svg);
+}
+
+.list__text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 11px;
+}
+
+/* product item */
+.list__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.list__item {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 11px;
+}
+.list__item label {
+  height: 96px;
+  display: flex;
+  align-items: center;
+}
+
+.item__photo {
+  width: 72px;
+  height: 96px;
+  margin: 0 16px 0 12px;
+}
+
+.item__description {
+  width: 100%;
+  max-width: 543px;
+}
+
+.description__title {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 250px;
+  margin-bottom: 8px;
+}
+
+.description__additional {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  margin: 8px 0;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.description__company {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(151, 151, 175);
+}
+
+.company__name {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.company__info {
+  margin-left: 6px;
+}
+
+.item__count {
+  margin-right: 16px;
+  margin-top: -1px;
+}
+
+.count__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  margin-bottom: 9px;
+}
+.count__container .count__minus, .count__container .count__plus {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.2px;
+  width: 24px;
+  padding: 2px 7px 6px 8px;
+}
+.count__container .count__minus {
+  color: rgba(0, 0, 0, 0.2);
+}
+.count__container .count__number {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  width: 44px;
+  text-align: center;
+}
+
+.count__stock {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(255, 59, 48);
+  margin: 0 0 8px;
+}
+
+.count__buttons {
+  display: flex;
+  justify-content: flex-end;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.item__price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 110px;
+  height: 99px;
+  margin-top: -2px;
+}
+
+.price__main {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 5px;
+}
+.price__main .small-number {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  font-style: normal;
+}
+.price__main .large-number {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.2px;
+}
+
+.price__sale {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(151, 151, 175);
+  padding-bottom: 1px;
+  border-bottom: 1px dashed rgb(151, 151, 175);
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: line-through;
+}
+
+/* miss list */
+.basket__miss-list {
+  padding: 36px 0 40px;
+}
+
+.miss-list__header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 17px;
+}
+
+.miss-list__text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.miss-list__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.miss-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 12px;
+}
+.miss-list__item .item__photo {
+  margin: 0 16px 0 0;
+}
+.miss-list__item .description__title {
+  max-width: 309px;
+}
+.miss-list__item .item__description {
+  color: rgb(151, 151, 175);
+}
+.miss-list__item .item__count {
+  margin-right: 125px;
+}
+.miss-list__item:last-child {
+  padding-top: 4px;
+}
+
 .header {
   position: relative;
   padding: 20px 0 44px;
@@ -41,7 +320,7 @@ body {
   width: 100%;
   height: 24px;
   border-radius: 24px 24px 0 0;
-  background-color: #fff;
+  background-color: rgb(246, 246, 250);
   position: absolute;
   bottom: 0px;
 }
@@ -66,6 +345,7 @@ body {
   font-variant: all-small-caps;
   letter-spacing: 0.56px;
   width: 106.5px;
+  margin-top: -2px;
 }
 
 .header__search {
@@ -88,6 +368,7 @@ body {
   color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0);
   width: 100%;
+  margin-top: -4px;
 }
 .search__input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
@@ -96,10 +377,15 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.search__icon {
+  margin: 3px 2px 0 0;
+}
+
 .header__icon-menu {
   display: flex;
   -moz-column-gap: 43px;
        column-gap: 43px;
+  margin-left: 0px;
 }
 
 .icon-menu__item {
@@ -112,10 +398,12 @@ body {
 .icon-menu__item .basket-icon {
   width: 26.29px;
   height: 22.86px;
+  margin: 0 4px 0 0;
 }
 .icon-menu__item .profile-icon {
   width: 19px;
   height: 20px;
+  margin: 2px 0 0 2px;
 }
 
 .basket-count {
@@ -127,12 +415,18 @@ body {
   justify-content: center;
   width: 16px;
   height: 16px;
+  border-radius: 50%;
+  background-color: #F55123;
+}
+.basket-count span {
   font-size: 1rem;
   line-height: 1.8rem;
   font-weight: 700;
   font-style: normal;
-  border-radius: 50%;
-  background-color: #F55123;
+  text-align: center;
+  width: 12px;
+  height: 18px;
+  margin-bottom: 2px;
 }
 
 .icon-menu__text {

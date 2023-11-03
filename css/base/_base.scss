@@ -14,4 +14,18 @@ html {
 
 body {
   font-family: 'Segoe UI', sans-serif;
+  background-color: $background-smoky;
+}
+
+.main__wrapper {
+  display: flex;
+  column-gap: 32px;
+}
+
+.main__left-column {
+  width: calc(100%/3*2 + 32px);
+}
+
+.main__right-column {
+  width: calc(100%/3*1);
 }
