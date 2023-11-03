@@ -1,0 +1,97 @@
+.header {
+  position: relative;
+  padding: 20px 0 44px;
+  color: rgb(255, 255, 255); 
+  background-color: #6725A8;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 24px;
+    border-radius: 24px 24px 0 0;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  column-gap: 32px;
+}
+
+.header__left-column {
+  display: flex;
+  column-gap: 16px;
+}
+
+.header__title {
+  @include font(2.8rem, 2.4rem, 600);
+  font-variant: all-small-caps;
+  letter-spacing: 0.56px;
+  width: 106.5px;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search__input {
+  @include font(1.8rem, 2.4rem);
+  border: none;
+  color: rgb(255, 255, 255); 
+  background-color: rgba(255, 255, 255, 0.0);
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.header__icon-menu {
+  display: flex;
+  column-gap: 43px;
+}
+
+.icon-menu__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .basket-icon {
+    width: 26.29px;
+    height: 22.86px;
+  }
+
+  .profile-icon {
+    width: 19px;
+    height: 20px;
+  }
+}
+
+.basket-count {
+  position: absolute;
+  top: -7px;
+  right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  @include font(1rem, 1.8rem, 700);
+  border-radius: 50%;
+  background-color: #F55123;
+}
+
+.icon-menu__text {
+  @include font(1.3rem, 1.6rem);
+}
