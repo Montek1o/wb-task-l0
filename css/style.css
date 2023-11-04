@@ -37,6 +37,7 @@ h2 {
 
 .main__left-column {
   width: calc(66.6666666667% + 32px);
+  margin-bottom: 10px;
 }
 
 .main__right-column {
@@ -552,6 +553,9 @@ h2 {
   font-weight: 400;
   font-style: normal;
   color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   order: -1;
 }
 .form__item .error {
@@ -559,6 +563,7 @@ h2 {
   line-height: 1.4rem;
   font-weight: 400;
   font-style: normal;
+  height: 14px;
 }
 
 .header {
@@ -687,6 +692,31 @@ h2 {
   line-height: 1.6rem;
   font-weight: 400;
   font-style: normal;
+}
+
+.footer {
+  position: relative;
+  padding: 48px 0 24px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #6725A8;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+}
+.footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 24px;
+  border-radius: 0 0 24px 24px;
+  background-color: rgb(246, 246, 250);
+  position: absolute;
+  top: 0px;
+}
+
+.footer__text {
+  text-align: center;
 }
 
 .wrapper {

@@ -55,10 +55,12 @@
     @include font(1.3rem, 1.6rem);
     @extend %transition;
     color: transparent;
+    user-select: none;
     order: -1;
   }
 
   .error {
     @include font(1.2rem, 1.4rem);
+    height: 14px;
   }
 }
