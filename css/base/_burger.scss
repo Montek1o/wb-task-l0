@@ -1,0 +1,13 @@
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+
+  img {
+    width: 28px;
+    height: 24px;
+  }
+}

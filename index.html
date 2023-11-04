@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Товары и точка</title>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+      <div class="header__left-column">
+        <div class="burger">
+          <img src="./assets/svg/burger.svg" alt="burger-menu">
+        </div>
+        <h1 class="header__title">товары<br>и точка</h1>
+      </div>
+      <div class="header__search">
+        <input class="search__input" placeholder="Я ищу...">
+        <div class="search__icon">
+          <img src="./assets/svg/search.svg" alt="search-icon">
+        </div>
+      </div>
+      <div class="header__icon-menu">
+        <div class="icon-menu__item">
+          <img class="profile-icon" src="./assets/svg/profile.svg" alt="profile-icon">
+          <p class="icon-menu__text">Профиль</p>
+        </div>
+        <div class="icon-menu__item">
+          <div class="basket-count"><span>3</span></div>
+          <img class="basket-icon" src="./assets/svg/basket.svg" alt="basket-icon">
+          <p class="icon-menu__text">Корзина</p>
+        </div>
+      </div> 
+    </div>
+  </header>
+  <main class="main">
+    <div class="wrapper main__wrapper">
+      <div class="main__left-column">
+        <section class="basket">
+          <h2 class="basket__title">Корзина</h2>
+          <div class="basket__list">
+            <div class="list__header">
+              <label>
+                <input class="list__checkbox checkbox" type="checkbox">
+                <span class="list__custom-checkbox custom-checkbox"></span>
+                <span class="list__text">Выбрать все</span>
+              </label>
+              <img src="./assets/svg/arrow.svg" alt="arrow">
+            </div>
+            <div class="list__body">
+            </div>
+          </div>
+          <div class="basket__miss-list">
+            <div class="miss-list__header">
+              <span class="miss-list__text">Отсутствуют · 3 товара</span>
+              <img src="./assets/svg/arrow.svg" alt="arrow">
+            </div>
+            <div class="miss-list__body">
+            </div>
+          </div>
+        </section>
+        <section class="delivery">
+          <div class="delivery__header">
+            <h2 class="delivery__title">Способ доставки</h2>
+            <p class="delivery__edit">Изменить</p>
+          </div>
+          <div class="delivery__point">
+            <p class="point__title">Пункт выдачи</p>
+            <div>
+              <p class="point__content">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <p class="point__score"><img src="./assets/svg/star.svg" alt="star"><span>4.99</span>Ежедневно с 10 до 21 </p>
+            </div>
+          </div>
+          <div class="delivery__point">
+            <p class="point__title">Стоимость доставки</p>
+            <p class="point__content">Бесплатно</p>
+          </div>
+          <div class="delivery__point">
+            <p class="point__title">5—6 февраля</p>
+            <div class="point__photo__container">
+              <div style="position: relative;">
+                <img class="point__photo" src="./assets/products/t-shirt.png" alt="product-photo">
+              </div>
+              <div style="position: relative;">
+                <div class="point__product-count"><span class="large-count">184</span></div>
+                <img class="point__photo" src="./assets/products/case.png" alt="product-photo">
+              </div>
+              <div style="position: relative;">
+                <div class="point__product-count"><span>2</span></div>
+                <img class="point__photo" src="./assets/products/pencils.png" alt="product-photo">
+              </div>
+            </div>
+          </div>
+          <div class="delivery__point">
+            <p class="point__title">7—8 февраля</p>
+            <div style="position: relative;">
+              <div class="point__product-count"><span>16</span></div>
+              <img class="point__photo" src="./assets/products/case.png" alt="product-photo">
+            </div>
+          </div>
+          <div class="delivery__refund">
+            <img class="refund__icon" src="./assets/svg/tick.svg" alt="tick">
+            <p class="refund__text">Обратная доставка товаров на склад при отказе —<span>бесплатно</span></p>
+          </div>
+        </section>
+        <section class="pay">
+          <div class="pay__header">
+            <h2 class="pay__title">Способ оплаты</h2>
+            <p class="pay__edit">Изменить</p>
+          </div>
+          <div class="pay__card">
+            <img class="card__img" src="./assets/svg/card/mir.svg" alt="card">
+            <p class="card__number">1234 56•• •••• 1234</p>
+            <p class="card__data">01/30</p>
+          </div>
+          <p class="pay__footer">Спишем оплату с карты при получении</p>
+        </section>
+        <section class="recipient">
+          <h2 class="recipient__title">Получатель</h2>
+          <form class="recipient__form">
+            <div class="form__top">
+              <div class="form__item">
+                <input class="name__input" type="text" placeholder="Имя">
+                <p class="name__tag tag">Имя</p>
+                <p class="name__error error"></p>
+              </div>
+              <div class="form__item">
+                <input class="last-name__input" type="text" placeholder="Фамилия">
+                <p class="last-name__tag tag">Фамилия</p>
+                <p class="last-name__error error"></p>
+              </div>
+            </div>
+            <div class="form__bottom">
+              <div class="form__item">
+                <input class="mail__input" type="email" placeholder="Почта">
+                <p class="mail__tag tag">Почта</p>
+                <p class="mail__error error"></p>
+              </div>
+              <div class="form__item">
+                <input class="telephone__input" type="tel" placeholder="Телефон">
+                <p class="telephone__tag tag">Телефон</p>
+                <p class="telephone__error error"></p>
+              </div>
+              <div class="form__item">
+                <input class="tax__input" placeholder="ИНН">
+                <p class="tax__tag tag">ИНН для таможни</p>
+                <p class="tax__error error">Для таможенного оформления</p>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div class="main__right-column">
+        <section class="total">
+          <div>
+            <div class="total__header">
+              <h2 class="total__title">Итого</h2>
+              <p class="total__amount"><span>2 101 063</span> сом</p>
+            </div>
+            <div class="total__row">
+              <p class="total__products">203 товара</p>
+              <p class="total__products-sum">2 302 048 сом</p>
+            </div>
+            <div class="total__row">
+              <p class="total__sale">Скидка</p>
+              <p class="total__sale-sum">−200 985 сом</p>
+            </div>
+            <div class="total__row">
+              <p>Доставка</p>
+              <p>Бесплатно</p>
+            </div>
+          </div>
+          <div class="total__extradition">
+            <div class="extradition__header">
+              <p class="extradition__title">Доставка в пункт выдачи</p>
+              <img class="extradition__edit" src="./assets/svg/pencil.svg" alt="edit-button">
+            </div>
+            <p class="extradition__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+            <p class="extradition__date">5–8 фев</p>
+            <div class="extradition__refund">
+              <img class="refund__icon" src="./assets/svg/tick.svg" alt="tick">
+              <p class="refund__text">Обратная доставка товаров на склад при отказе —<span>бесплатно</span></p>
+            </div>
+          </div>
+          <div class="total__payment">
+            <div class="payment__header">
+              <p class="payment__title">Оплата картой</p>
+              <img class="payment__edit" src="./assets/svg/pencil.svg" alt="edit-button">
+            </div>
+            <div class="payment__card">
+              <img src="./assets/svg/card/mir.svg" alt="card">
+              <p>1234 12•• •••• 1234</p>
+            </div>
+            <div class="payment__checkbox">
+              <label class="checkbox__container">
+                <input class="payment-checkbox checkbox" type="checkbox">
+                <span class="custom-checkbox"></span>
+                Списать оплату сразу
+              </label>
+              <p>Спишем оплату с карты при получении</p>
+            </div>
+          </div>
+          <button class="total__button">Заказать</button>
+          <div class="total__rules">
+            <img src="./assets/svg/tick2.svg" alt="tick">
+            <p>Соглашаюсь с <span>правилами пользования торговой площадкой</span> и <span>возврата</span></p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="footer__text">© 2022 ООО «Товары и точка»</p>
+  </footer>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

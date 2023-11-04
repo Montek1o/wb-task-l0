@@ -1,0 +1,20 @@
+// Abstract
+@import "abstract/constans";
+@import "abstract/mixin";
+@import "abstract/placeholders";
+
+// Base
+@import "base/base";
+@import "base/burger";
+
+// Components
+@import "components/basket";
+@import "components/delivery";
+@import "components/pay";
+@import "components/recipient";
+@import "components/total";
+
+// Layouts
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/wrapper";
