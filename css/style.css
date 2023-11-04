@@ -17,6 +17,14 @@ body {
   background-color: rgb(246, 246, 250);
 }
 
+h2 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.24px;
+}
+
 .main__wrapper {
   display: flex;
   -moz-column-gap: 32px;
@@ -322,11 +330,6 @@ body {
 }
 
 .delivery__title {
-  font-size: 2.4rem;
-  line-height: 3.2rem;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.24px;
   width: 100%;
 }
 
@@ -426,6 +429,51 @@ body {
 
 .refund__icon {
   margin-right: 8px;
+}
+
+.pay {
+  margin: 16px 0;
+  padding: 16px 24px 24px;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+}
+
+.pay__header {
+  display: flex;
+}
+
+.pay__title {
+  width: 100%;
+}
+
+.pay__edit {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(203, 17, 171);
+  margin: 7px 0 1px 10px;
+}
+
+.pay__card {
+  display: flex;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+  margin: 15px 0 8px;
+}
+
+.card__number {
+  margin: 0 12px 0 9px;
+}
+
+.pay__footer {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(151, 151, 175);
 }
 
 .header {

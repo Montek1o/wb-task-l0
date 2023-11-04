@@ -1,6 +1,3 @@
-import addProducts from "./scripts/addProducts";
-import addMissProducts from "./scripts/addMissProducts";
+import app from "./scripts/app";
 
-addProducts();
-addMissProducts();
-
+app();

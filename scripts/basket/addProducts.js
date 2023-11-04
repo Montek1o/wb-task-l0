@@ -27,7 +27,7 @@ export default function addProducts() {
     </div>
     <div class="item__count">
       <div class="count__container">
-        <span class="count__minus">−</span>
+        <span class="count__minus min">−</span>
         <span class="count__number">${products[i].count}</span>
         <span class="count__plus">+</span>
       </div>
