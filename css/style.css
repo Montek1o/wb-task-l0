@@ -120,13 +120,19 @@ h2 {
 
 .list__item {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
   padding-top: 11px;
 }
 .list__item label {
   height: 96px;
   display: flex;
   align-items: center;
+}
+.list__item__left-column {
+  display: flex;
+}
+.list__item__right-column {
+  display: flex;
 }
 
 .item__photo {
@@ -235,7 +241,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 110px;
+  width: 110px !important;
   height: 99px;
   margin-top: -2px;
 }
@@ -494,7 +500,7 @@ h2 {
 }
 
 .recipient__form {
-  width: 700px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
 }
@@ -720,10 +726,16 @@ h2 {
   font-style: normal;
 }
 .total__rules img {
-  margin: -10px 0 0 1px;
+  height: 24px;
 }
 .total__rules span {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1399px) {
+  .total__rules {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
 }
 
 .header {

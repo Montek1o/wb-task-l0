@@ -119,10 +119,14 @@
   @include font(1.3rem, 1.6rem);
 
   img {
-    margin: -10px 0 0 1px;
+    height: 24px;
   }
 
   span {
     border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  }
+
+  @include media-tablet {
+    column-gap: 10px;
   }
 }
