@@ -308,6 +308,126 @@ body {
   padding-top: 4px;
 }
 
+.delivery {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+  row-gap: 16px;
+  padding: 16px 24px 24px;
+}
+
+.delivery__header {
+  display: flex;
+}
+
+.delivery__title {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.24px;
+  width: 100%;
+}
+
+.delivery__edit {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(203, 17, 171);
+  margin: 7px 0 1px 10px;
+}
+
+.delivery__point {
+  display: flex;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.point__title {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  font-style: normal;
+  width: 153px;
+}
+
+.point__content {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.point__score {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 4px;
+}
+.point__score span {
+  margin: 0 8px 0 4px;
+}
+
+.point__photo__container {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.point__photo {
+  width: 40px;
+  height: 56px;
+}
+
+.point__product-count {
+  position: absolute;
+  right: -4.1px;
+  top: -9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: rgb(245, 81, 35);
+}
+.point__product-count span {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  padding: 0px 2px 0;
+}
+.point__product-count .large-count {
+  padding: 0px 4px 0;
+}
+
+.delivery__refund {
+  display: flex;
+  align-items: center;
+  padding-top: 3px;
+}
+
+.refund__text {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+}
+.refund__text span {
+  color: rgb(12, 180, 119);
+  border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
+  margin-left: 4px;
+}
+
+.refund__icon {
+  margin-right: 8px;
+}
+
 .header {
   position: relative;
   padding: 20px 0 44px;

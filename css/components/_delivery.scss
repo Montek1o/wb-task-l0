@@ -1,0 +1,103 @@
+.delivery {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: $background-white;
+  row-gap: 16px;
+  padding: 16px 24px 24px;
+}
+
+.delivery__header {
+  display: flex;
+}
+
+.delivery__title {
+  @include font(2.4rem, 3.2rem, 700);
+  letter-spacing: -0.24px;
+  width: 100%;
+}
+
+.delivery__edit {
+  @include font(1.6rem, 2.4rem, 700);
+  color: rgba(203, 17, 171, 1);
+  margin: 7px 0 1px 10px;
+}
+
+.delivery__point {
+  display: flex;
+  column-gap: 32px;
+}
+
+.point__title {
+  @include font(1.6rem, 2.4rem, 600);
+  width: 153px;
+}
+
+.point__content {
+  @include font(1.6rem, 2.4rem);
+}
+
+.point__score {
+  @include font(1.3rem, 1.6rem);
+  margin-top: 4px;
+
+  span {
+    margin: 0 8px 0 4px;
+  }
+}
+
+
+.point__photo__container {
+  display: flex;
+  column-gap: 8px;
+}
+
+.point__photo {
+  width: 40px;
+  height: 56px;
+}
+
+.point__product-count {
+  position: absolute;
+  right: -4.1px;
+  top: -9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: rgba(245, 81, 35, 1);
+  
+  span {
+    @include font(1rem, 1.8rem, 600);
+    color: rgb(255, 255, 255);
+    padding: 0px 2px 0;
+  }
+
+  .large-count {
+    padding: 0px 4px 0;
+  }
+}
+
+.delivery__refund {
+  display: flex;
+  align-items: center;
+  padding-top: 3px;
+}
+
+.refund__text {
+  @include font(1.3rem, 1.6rem);
+
+  span {
+    color: rgba(12, 180, 119, 1);
+    border-bottom: 1px dashed rgba(12, 180, 119, 0.20);
+    margin-left: 4px;
+  }
+}
+
+.refund__icon {
+  margin-right: 8px;
+}
+
+
