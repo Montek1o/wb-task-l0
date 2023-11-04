@@ -1,3 +1,7 @@
+.form__item .tag {
+  transition: all 0.3s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -474,6 +478,87 @@ h2 {
   font-weight: 400;
   font-style: normal;
   color: rgb(151, 151, 175);
+}
+
+.recipient {
+  margin: 16px 0;
+  padding: 16px 24px 24px;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+}
+
+.recipient__title {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.recipient__form {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.recipient__form input {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.recipient__form input::-moz-placeholder {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(151, 151, 175);
+}
+.recipient__form input::placeholder {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(151, 151, 175);
+}
+.recipient__form input:focus::-moz-placeholder {
+  color: transparent;
+}
+.recipient__form input:focus::placeholder {
+  color: transparent;
+}
+.recipient__form input:focus + .tag {
+  color: rgb(151, 151, 175);
+}
+
+.form__top, .form__bottom {
+  display: flex;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form__item .tag {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  color: transparent;
+  order: -1;
+}
+.form__item .error {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header {
