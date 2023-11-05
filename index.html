@@ -33,6 +33,25 @@
         </div>
       </div> 
     </div>
+    <div class="header-mobile">
+      <div class="header-mobile__burger">
+        <img src="./assets/svg/burger-mobile.svg" alt="burger-menu">
+      </div>
+      <h1 class="header-mobile__title">товары и точка</h1>
+      <div class="header-mobile__search-icon">
+        <img src="./assets/svg/search-mobile.svg" alt="search">
+      </div>
+    </div>
+    <div class="icon-menu">
+      <img src="./assets/svg/icon-menu/main.svg" alt="main">
+      <img src="./assets/svg/icon-menu/catalog.svg" alt="catalog">
+      <div style="position: relative;">
+        <div class="basket-count"><span>3</span></div>
+        <img src="./assets/svg/icon-menu/cart.svg" alt="cart">
+      </div>
+      <img src="./assets/svg/icon-menu/favorites.svg" alt="favoriets">
+      <img src="./assets/svg/icon-menu/profile.svg" alt="profile">
+    </div>
   </header>
   <main class="main">
     <div class="wrapper main__wrapper">
@@ -76,7 +95,7 @@
             <p class="point__title">Стоимость доставки</p>
             <p class="point__content">Бесплатно</p>
           </div>
-          <div class="delivery__point">
+          <div class="delivery__point delivery__date">
             <p class="point__title">5—6 февраля</p>
             <div class="point__photo__container">
               <div style="position: relative;">
@@ -92,11 +111,13 @@
               </div>
             </div>
           </div>
-          <div class="delivery__point">
+          <div class="delivery__point delivery__date">
             <p class="point__title">7—8 февраля</p>
-            <div style="position: relative;">
-              <div class="point__product-count"><span>16</span></div>
-              <img class="point__photo" src="./assets/products/case.png" alt="product-photo">
+            <div class="point__photo__container">
+              <div style="position: relative;">
+                <div class="point__product-count"><span class="large-count">16</span></div>
+                <img class="point__photo" src="./assets/products/case.png" alt="product-photo">
+              </div>
             </div>
           </div>
           <div class="delivery__refund">
@@ -133,6 +154,8 @@
             </div>
             <div class="form__bottom">
               <div class="form__item">
+                <input class="mail__input-mobile" type="email" placeholder="Электронная почта">
+                <p class="mail__tag-mobile tag">Электронная почта</p>
                 <input class="mail__input" type="email" placeholder="Почта">
                 <p class="mail__tag tag">Почта</p>
                 <p class="mail__error error"></p>
@@ -180,7 +203,7 @@
             <p class="extradition__date">5–8 фев</p>
             <div class="extradition__refund">
               <img class="refund__icon" src="./assets/svg/tick.svg" alt="tick">
-              <p class="refund__text">Обратная доставка товаров на склад при отказе —<span>бесплатно</span></p>
+              <p class="refund__text">Обратная доставка товаров на склад при отказе — <span>бесплатно</span></p>
             </div>
           </div>
           <div class="total__payment">

@@ -5,10 +5,18 @@
   background-color: $background-white;
   row-gap: 16px;
   padding: 16px 24px 24px;
+
+  @include media-mobile {
+    padding: 16px 16px 24px;
+  }
 }
 
 .delivery__header {
   display: flex;
+
+  @include media-mobile {
+    margin-bottom: -8px;
+  }
 }
 
 .delivery__title {
@@ -19,11 +27,29 @@
   @include font(1.6rem, 2.4rem, 700);
   color: rgba(203, 17, 171, 1);
   margin: 7px 0 1px 10px;
+
+  @include media-mobile {
+    margin-top: 5px;
+  }
 }
 
 .delivery__point {
   display: flex;
   column-gap: 32px;
+
+  @include media-mobile {
+    flex-direction: column;
+  }
+}
+
+.delivery__date {
+  @include media-mobile {
+    margin-bottom: 3px;
+
+    .point__title {
+      margin-bottom: 12px;
+    }
+  }
 }
 
 .point__title {
@@ -57,7 +83,7 @@
 
 .point__product-count {
   position: absolute;
-  right: -4.1px;
+  right: -5px;
   top: -9px;
   display: flex;
   justify-content: center;
@@ -68,13 +94,14 @@
   background-color: rgba(245, 81, 35, 1);
   
   span {
+    display: inline-block;
     @include font(1rem, 1.8rem, 600);
     color: rgb(255, 255, 255);
     padding: 0px 2px 0;
   }
 
   .large-count {
-    padding: 0px 4px 0;
+    padding: 0px 5px 0;
   }
 }
 
@@ -82,6 +109,10 @@
   display: flex;
   align-items: center;
   padding-top: 3px;
+
+  @include media-mobile {
+    padding: 3px 8px 0;
+  }
 }
 
 .refund__text {

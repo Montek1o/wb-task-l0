@@ -13,6 +13,7 @@ export const products = [
   },
   {
     name: 'Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe',
+    nameMobile: 'Силиконовый чехол картхолдер (отверстия) для...',
     color: 'прозрачный',
     size: null,
     company: 'OOO Мегапрофстиль',
@@ -25,6 +26,7 @@ export const products = [
   },
   {
     name: 'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell',
+    nameMobile: 'Карандаши цветные Faber-Castell "Замок", набор 24 цв...',
     color: null,
     size: null,
     company: 'OOO Вайлдберриз',

@@ -14,11 +14,19 @@
     position: absolute;
     bottom: 0px;
   }
+
+  @include media-mobile {
+    padding: 14px 0px 35px;
+  }
 }
 
 .header__wrapper {
   display: flex;
   column-gap: 32px;
+
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .header__left-column {
@@ -111,4 +119,52 @@
 
 .icon-menu__text {
   @include font(1.3rem, 1.6rem);
+}
+
+/* mobile */
+
+.header-mobile {
+  display: none;
+  justify-content: space-between;
+  padding: 0 13px;
+
+  @include media-mobile {
+    display: flex;
+  }
+}
+
+.header-mobile__title {
+  @include font(2.6rem, 2.4rem, 600);
+  font-variant: all-small-caps;
+  letter-spacing: 0.52px;
+  margin-top: -2px;
+}
+
+.icon-menu {
+  display: none;
+
+  @include media-mobile {
+    position: fixed;
+    bottom: 0;
+    background-color: $background-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    padding: 0 13px;
+    z-index: 10;
+    box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(2.5px);
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .basket-count {
+      right: -6px;
+      top: -3px;
+    }
+  }
 }

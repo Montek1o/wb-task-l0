@@ -2,4 +2,8 @@
   max-width: $content-width;
   padding: 0 24px;
   margin: 0 auto;
+
+  @include media-mobile {
+    padding: 0;
+  }
 }
