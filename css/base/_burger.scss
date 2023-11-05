@@ -10,4 +10,24 @@
     width: 28px;
     height: 24px;
   }
+
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.burger-mobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 9px;
+
+  img {
+    width: 28px;
+    height: 28px;
+  }
+
+  @include media-mobile {
+    display: flex;
+  }
 }

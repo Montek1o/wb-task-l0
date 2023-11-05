@@ -3,6 +3,11 @@
   padding: 16px 24px 24px;
   border-radius: 16px;
   background-color: $background-white;
+
+  @include media-mobile {
+    margin: 12px 0;
+    padding: 16px 16px 24px;
+  }
 }
 
 .pay__header {
@@ -17,16 +22,28 @@
   @include font(1.6rem, 2.4rem, 700);
   color: rgba(203, 17, 171, 1);
   margin: 7px 0 1px 10px;
+
+  @include media-mobile {
+    margin-top: 3px;
+  }
 }
 
 .pay__card {
   display: flex;
   @include font(1.6rem, 2.4rem);
   margin: 15px 0 8px;
+
+  @include media-mobile {
+    margin: 7px 0;
+  }
 }
 
 .card__number {
   margin: 0 12px 0 9px;
+
+  @include media-mobile {
+    margin: 1px 12px 0 8px;
+  }
 }
 
 .pay__footer {

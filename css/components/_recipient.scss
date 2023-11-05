@@ -3,11 +3,20 @@
   padding: 16px 24px 24px;
   border-radius: 16px;
   background-color: $background-white;
+
+  @include media-mobile {
+    margin: 12px 0;
+    padding: 16px 16px 24px;
+  }
 }
 
 .recipient__title {
   width: 100%;
   margin-bottom: 16px;
+
+  @include media-mobile {
+    margin-bottom: 7px;
+  }
 }
 
 .recipient__form {
@@ -39,11 +48,25 @@
   input:focus + .tag {
     color: rgba(151, 151, 175, 1);
   }
+
+  @include media-mobile {
+    row-gap: 16px;
+
+    input {
+      margin-top: 1px;
+      margin-bottom: 4px;
+    }
+  }
 }
 
 .form__top, .form__bottom {
   display: flex;
   column-gap: 24px;
+
+  @include media-mobile {
+    flex-direction: column;
+    row-gap: 16px;
+  }
 }
 
 .form__item {
@@ -62,5 +85,43 @@
   .error {
     @include font(1.2rem, 1.4rem);
     height: 14px;
+  }
+
+  @include media-mobile {
+    .tag {
+      @include font(1.2rem, 1.4rem);
+    }
+
+    .error {
+      height: 10px;
+    }
+  }
+}
+
+.mail__input {
+  &-mobile {
+    display: none;
+  }
+
+  @include media-mobile {
+    display: none;
+
+    &-mobile {
+      display: block;
+    }
+  }
+}
+
+.mail__tag {
+  &-mobile {
+    display: none;
+  }
+
+  @include media-mobile {
+    display: none;
+
+    &-mobile {
+      display: block;
+    }
   }
 }

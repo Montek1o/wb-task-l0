@@ -12,8 +12,14 @@ export default function addProducts() {
         <input class="item__checkbox checkbox" type="checkbox">
         <span class="item__custom-checkbox custom-checkbox"></span>
       </label>
+      ${products[i].size ? `<div class="additional__size-mobile">${products[i].size}</div>` : ''}
       <img class="item__photo" src="${products[i].photo}">
       <div class="item__description">
+        <div class="item__price-mobile">
+          <p class="price__main">${products[i].price} сом</p>
+          <p class="price__sale">${products[i].sale} сом</p>
+        </div>
+        <p class="description__title-mobile">${products[i].nameMobile ? products[i].nameMobile : products[i].name}</p>
         <p class="description__title">${products[i].name}</p>
         ${products[i].color || products[i].size ? `
         <div class="description__additional">
@@ -45,7 +51,7 @@ export default function addProducts() {
         `<p class="price__main"><span class="small-number">${products[i].price}</span> сом</p>` : 
         `<p class="price__main"><span class="large-number">${products[i].price}</span> сом</p>`}
         <p class="price__sale">${products[i].sale} сом</p>
-      </div> 
+      </div>
     </div>`;  
 
     productList.append(product);
