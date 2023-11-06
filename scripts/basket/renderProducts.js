@@ -1,6 +1,6 @@
 import { products } from './products';
 
-export default function addProducts() {
+export default function renderProducts() {
   const productList = document.querySelector('.list__body');
 
   for (let i = 0; i < products.length; i++) {
@@ -36,7 +36,7 @@ export default function addProducts() {
     <div class="list__item__right-column">
       <div class="item__count">
         <div class="count__container">
-          <span class="count__minus min">−</span>
+          <span class="count__minus">−</span>
           <span class="count__number">${products[i].count}</span>
           <span class="count__plus">+</span>
         </div>

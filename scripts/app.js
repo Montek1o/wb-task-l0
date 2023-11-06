@@ -1,7 +1,14 @@
-import addProducts from "./basket/addProducts";
-import addMissProducts from "./basket/addMissProducts";
+import renderProducts from "./basket/renderProducts";
+import renderMissProducts from "./basket/renderMissProducts";
+import modalPayController from "./modal/modalPayController";
+import modalDeliveryController from "./modal/modalDeliveryController";
 
 export default function app() {
-  addProducts();
-  addMissProducts();
+  // basket
+  renderProducts();
+  renderMissProducts();
+
+  // modal
+  modalPayController();
+  modalDeliveryController();
 };

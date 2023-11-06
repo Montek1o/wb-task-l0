@@ -1,6 +1,6 @@
 import { products } from './products';
 
-export default function addProducts() {
+export default function renderProducts() {
   const productList = document.querySelector('.miss-list__body');
 
   for (let i = 0; i < products.length; i++) {

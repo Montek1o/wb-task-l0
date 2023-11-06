@@ -82,12 +82,12 @@
         <section class="delivery">
           <div class="delivery__header">
             <h2 class="delivery__title">Способ доставки</h2>
-            <p class="delivery__edit">Изменить</p>
+            <p class="delivery__edit edit-delivery">Изменить</p>
           </div>
           <div class="delivery__point">
-            <p class="point__title">Пункт выдачи</p>
+            <p class="point__title type-delivery">Пункт выдачи</p>
             <div>
-              <p class="point__content">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <p class="point__content edit-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
               <p class="point__score"><img src="./assets/svg/star.svg" alt="star"><span>4.99</span>Ежедневно с 10 до 21 </p>
             </div>
           </div>
@@ -128,10 +128,10 @@
         <section class="pay">
           <div class="pay__header">
             <h2 class="pay__title">Способ оплаты</h2>
-            <p class="pay__edit">Изменить</p>
+            <p class="pay__edit edit-pay">Изменить</p>
           </div>
           <div class="pay__card">
-            <img class="card__img" src="./assets/svg/card/mir.svg" alt="card">
+            <img class="card-type" src="./assets/svg/card/mir.svg" alt="card">
             <p class="card__number">1234 56•• •••• 1234</p>
             <p class="card__data">01/30</p>
           </div>
@@ -196,10 +196,10 @@
           </div>
           <div class="total__extradition">
             <div class="extradition__header">
-              <p class="extradition__title">Доставка в пункт выдачи</p>
-              <img class="extradition__edit" src="./assets/svg/pencil.svg" alt="edit-button">
+              <p class="extradition__title type-delivery">Доставка в пункт выдачи</span></p>
+              <img class="extradition__edit edit-delivery" src="./assets/svg/pencil.svg" alt="edit-button">
             </div>
-            <p class="extradition__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+            <p class="extradition__address edit-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
             <p class="extradition__date">5–8 фев</p>
             <div class="extradition__refund">
               <img class="refund__icon" src="./assets/svg/tick.svg" alt="tick">
@@ -209,10 +209,10 @@
           <div class="total__payment">
             <div class="payment__header">
               <p class="payment__title">Оплата картой</p>
-              <img class="payment__edit" src="./assets/svg/pencil.svg" alt="edit-button">
+              <img class="payment__edit edit-pay" src="./assets/svg/pencil.svg" alt="edit-button">
             </div>
             <div class="payment__card">
-              <img src="./assets/svg/card/mir.svg" alt="card">
+              <img class="card-type" src="./assets/svg/card/mir.svg" alt="card">
               <p>1234 12•• •••• 1234</p>
             </div>
             <div class="payment__checkbox">
@@ -236,6 +236,130 @@
   <footer class="footer">
     <p class="footer__text">© 2022 ООО «Товары и точка»</p>
   </footer>
+  <div class="modal-pay">
+    <div class="modal-pay__container">
+      <div class="modal-pay__header">
+        <p>Способ оплаты</p>
+        <img class="modal-pay__close" src="./assets/svg/modal/close.svg" alt="close">
+      </div>
+      <div class="modal-pay__content">
+        <label>
+          <input class="radio" type="radio" name="pay-card" value="mir" checked>
+          <span class="custom-radio"></span>
+          <img src="./assets/svg/card/mir.svg" alt="card-mir">
+          1234 56•• •••• 1234
+        </label>
+        <label>
+          <input class="radio" type="radio" name="pay-card" value="visa">
+          <span class="custom-radio"></span>
+          <img src="./assets/svg/card/visa.svg" alt="card-visa">
+          1234 56•• •••• 1234
+        </label>
+        <label>
+          <input class="radio" type="radio" name="pay-card" value="mastercard">
+          <span class="custom-radio"></span>
+          <img src="./assets/svg/card/mastercard.svg" alt="card-mastercard">
+          1234 56•• •••• 1234
+        </label>
+        <label>
+          <input class="radio" type="radio" name="pay-card" value="maestro">
+          <span class="custom-radio"></span>
+          <img src="./assets/svg/card/maestro.svg" alt="card-maestro">
+          1234 56•• •••• 1234
+        </label>
+      </div>
+      <div class="modal-pay__footer">
+        <button class="modal-pay__button">Выбрать</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-delivery">
+    <div  class="modal-delivery__container">
+      <div class="modal-delivery__header">
+        <p>Способ доставки</p>
+        <img class="modal-delivery__close" src="./assets/svg/modal/close.svg" alt="close">
+      </div>
+      <div class="modal-delivery__content">
+        <div class="modal-delivery__way">
+          <label class="way__item">
+            <input class="way__radio" type="radio" name="way" value="в пункт выдачи" checked>
+            В пункт выдачи
+          </label>
+          <label class="way__item">
+            <input class="way__radio" type="radio" name="way" value="курьером">
+            Курьером
+          </label>
+        </div>
+        <div class="modal-delivery__addresses">
+          <p class="addresses__title">Мои адреса</p>
+          <div class="addresses__container addresses__courier">
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-courier" value="Бишкек, улица Табышалиева, 57" checked>
+                <span class="custom-radio"></span>
+                <p class="address__name">Бишкек, улица Табышалиева, 57</p>
+              </label>
+              <div class="address-delete" data-address="1"></div>
+            </div>
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-courier" value="Бишкек, улица Жукеева-Пудовкина, 77/1">
+                <span class="custom-radio"></span>
+                <p class="address__name">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+              </label>
+              <div class="address-delete" data-address="2"></div>
+            </div>
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-courier" value="Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1">
+                <span class="custom-radio"></span>
+                <p class="address__name">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
+              </label>
+              <div class="address-delete" data-address="3"></div>
+            </div>
+          </div>
+          <div class="addresses__container addresses__point">
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-point" value="г. Бишкек, улица Ахматбека Суюмбаева, 12/1" checked>
+                <span class="custom-radio"></span>
+                <div>
+                  <p class="address__name">г. Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <p class="address__estimation"><img src="./assets/svg/star.svg"><span>4.99</span>Пункт выдачи</p>
+                </div>
+              </label>
+              <div class="address-delete" data-address="4"></div>
+            </div>
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-point" value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1">
+                <span class="custom-radio"></span>
+                <div>
+                  <p class="address__name">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                  <p class="address__estimation"><img src="./assets/svg/star.svg"><span>4.99</span>Пункт выдачи</p>
+                </div>
+              </label>
+              <div class="address-delete" data-address="5"></div>
+            </div>
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-point" value="г. Бишкек, улица Табышалиева, д. 57">
+                <span class="custom-radio"></span>
+                <div>
+                  <p class="address__name">г. Бишкек, улица Табышалиева, д. 57</p>
+                  <p class="address__estimation"><img src="./assets/svg/star.svg"><span>4.99</span>Пункт выдачи</p>
+                </div>
+              </label>
+              <div class="address-delete" data-address="6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-delivery__footer">
+        <button class="modal-delivery__button">Выбрать</button>
+      </div>
+    </div>
+  </div>
   <script type="module" src="./main.js"></script>
 </body>
 </html>

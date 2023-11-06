@@ -5,6 +5,8 @@
   padding: 11px 9px;
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 8px;
+  cursor: pointer;
+  @extend %transition;
 
   img {
     width: 28px;
@@ -13,6 +15,10 @@
 
   @include media-mobile {
     display: none;
+  }
+
+  &:hover {
+    border-color: #ffffff;
   }
 }
 
