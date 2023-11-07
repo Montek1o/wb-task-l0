@@ -45,6 +45,10 @@
   }
 }
 
+.accordion-button {
+  cursor: pointer;
+}
+
 .checkbox {
   position: absolute;
   z-index: -1;
@@ -70,12 +74,28 @@
   margin-left: 11px;
 }
 
+.list__total-text {
+  display: none;
+  @include font(1.6rem, 2.4rem, 600);
+}
+
+.arrow {
+  @extend %transition;
+
+  &-close {
+    transform: rotate(-180deg);
+  }
+}
+
 /* product item */
 
 .list__body {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  overflow: hidden;
+  @extend %transition;
+  max-height: 529px;
 
   @include media-mobile {
     row-gap: 16px;
@@ -366,15 +386,17 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  cursor: pointer;
   padding-bottom: 17px;
 
-  img {
-    margin: 4px 4px 0 0;
-  }
-
+  
   @include media-mobile {
     padding-bottom: 18px;
     border: none;
+    
+    img {
+      margin: 4px 4px 0 0;
+    }
   }
 }
 
@@ -386,6 +408,9 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  overflow: hidden;
+  @extend %transition;
+  max-height: 509px;
 
   @include media-mobile {
     row-gap: 1px;

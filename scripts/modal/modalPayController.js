@@ -15,6 +15,7 @@ export default function modalPayController() {
       ) {
       modal.style.display = 'none';
       body.style.overflow = 'visible';
+      changeCard();
     }
 
     window.removeEventListener('keydown', closeModal);
