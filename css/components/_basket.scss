@@ -98,7 +98,7 @@
   max-height: 529px;
 
   @include media-mobile {
-    row-gap: 16px;
+    row-gap: 12px;
   }
 
   &:hover {
@@ -129,7 +129,7 @@
   @include media-mobile {
     flex-direction: column;
     padding-top: 12px;
-    row-gap: 12px;
+    row-gap: 6px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 
@@ -229,16 +229,16 @@
 .company__container {
   display: flex;
   align-items: center;
+
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .company__name {
   display: flex;
   align-items: center;
   margin-top: 2px;
-
-  @include media-mobile {
-    display: none;
-  }
 }
 
 .company__info {
@@ -352,7 +352,7 @@
   margin: 0 0 8px;
 
   @include media-mobile {
-    margin-bottom: 0px;
+    margin-bottom: 1px;
   }
 }
 
@@ -364,7 +364,10 @@
   opacity: 0;
 
   @include media-mobile {
-    column-gap: 0px;
+    opacity: 1;
+    column-gap: 24px;
+    padding: 12px;
+    margin-top: 1px;
   }
 }
 
@@ -525,7 +528,7 @@
   max-height: 509px;
 
   @include media-mobile {
-    row-gap: 1px;
+    row-gap: 0px;
   }
 }
 
@@ -576,8 +579,11 @@
       margin-right: -8px;
       margin-top: 6px;
 
-      img {
-        padding: 12px;
+      .count__buttons {
+        opacity: 1;
+        column-gap: 24px;
+        padding: 8px 12px 16px;
+        margin-top: 1px;
       }
     }
 

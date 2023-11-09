@@ -17,7 +17,7 @@ export default function renderProducts() {
       <div class="item__description">
         <div class="item__price-mobile">
           <p class="price__main">${products[i].price} сом</p>
-          <p class="price__sale">${products[i].sale} сом</p>
+          <p class="price__full-price">${products[i].fullPrice} сом</p>
         </div>
         <p class="description__title-mobile">${products[i].nameMobile ? products[i].nameMobile : products[i].name}</p>
         <p class="description__title">${products[i].name}</p>
