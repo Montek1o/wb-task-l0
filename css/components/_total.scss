@@ -100,11 +100,43 @@
     }
   }
 
+  .tooltip-free__content {
+    top: 40px;
+    left: -36px;
+  }
+
+  @media (max-width: 1054px) {
+    .tooltip-free__content {
+      top: 40px;
+      left: -60px;
+    }
+  }
+
+  @media (max-width: 994px) {
+    .tooltip-free__content {
+      top: 55px;
+      left: -80px;
+    }
+  }
+
+  
   @include media-mobile {
     background-color: rgba(240, 236, 244, 1);
-
+    
     .refund__text {
       margin-top: 2px;
+    }
+    
+    .tooltip-free__content {
+      top: 28px;
+      left: 80px;
+    }
+  }
+  
+  @media (max-width: 449px) {
+    .tooltip-free__content {
+      top: 40px;
+      left: -37px;
     }
   }
 }
@@ -170,6 +202,7 @@
   height: 44px;
   padding: 0 32px 5px;
   margin-bottom: 12px;
+  @extend %transition;
   cursor: pointer;
 
   &:hover {

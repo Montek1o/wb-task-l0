@@ -4,10 +4,25 @@ export const products = [
     color: 'белый',
     size: 56,
     company: 'OOO Вайлдберриз',
+    tooltip: {
+      title: 'OOO «ВАЙЛДБЕРРИЗ»',
+      tax: 'ОГРН: 1067746062449',
+      address: '142181, Московская область, г.о. Подольск, д. Коледино, тер. Индустриальный Парк Коледино, д. 6, стр. 1',
+    },
     count: 1,
     stock: 2,
-    price: '522',
-    sale: '1051',
+    price: '368',
+    fullPrice: '1051',
+    tooltipSale: [
+      {
+        name: 'Скидка 55%',
+        value: 0.55,
+      },
+      {
+        name: 'Скидка получателя 10%',
+        value: 0.1,
+      },
+    ],
     photo: './assets/products/t-shirt.png',
     darkPhoto: './assets/products/t-shirt-dark.png',
   },
@@ -17,10 +32,25 @@ export const products = [
     color: 'прозрачный',
     size: null,
     company: 'OOO Мегапрофстиль',
+    tooltip: {
+      title: 'OOO «МЕГАПРОФСТИЛЬ»',
+      tax: 'ОГРН: 5167746237148',
+      address: '129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34',
+    },
     count: 200,
     stock: null,
-    price: '2 100 047',
-    sale: '2 300 047',
+    price: '805 016',
+    fullPrice: '2 300 047',
+    tooltipSale: [
+      {
+        name: 'Скидка 55%',
+        value: 0.55,
+      },
+      {
+        name: 'Скидка получателя 10%',
+        value: 0.1,
+      },
+    ],
     photo: './assets/products/case.png',
     darkPhoto: './assets/products/case-dark.png',
   },
@@ -30,10 +60,25 @@ export const products = [
     color: null,
     size: null,
     company: 'OOO Вайлдберриз',
+    tooltip: {
+      title: 'OOO «ВАЙЛДБЕРРИЗ»',
+      tax: 'ОГРН: 1067746062449',
+      address: '142181, Московская область, г.о. Подольск, д Коледино, тер. Индустриальный Парк Коледино, д. 6, стр. 1',
+    },
     count: 2,
     stock: 2,
-    price: '494',
-    sale: '950',
+    price: '332',
+    fullPrice: '950',
+    tooltipSale: [
+      {
+        name: 'Скидка 55%',
+        value: 0.55,
+      },
+      {
+        name: 'Скидка получателя 10%',
+        value: 0.1,
+      },
+    ],
     photo: './assets/products/pencils.png',
     darkPhoto: './assets/products/pencils-dark.png',
   }
