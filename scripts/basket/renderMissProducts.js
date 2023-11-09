@@ -26,8 +26,8 @@ export default function renderProducts() {
     <div class="list__item__right-column">
       <div class="item__count">
         <div class="count__buttons">
-          <img class="count__like" src="./assets/svg/like.svg" alt="like">
-          <img class="count__remove" src="./assets/svg/trash.svg" alt="remove">
+        <div class="count__like" src="./assets/svg/like.svg" alt="like"></div>
+        <div class="count__remove" src="./assets/svg/trash.svg" alt="remove"></div>
         </div>
       </div>
     </div>`;  

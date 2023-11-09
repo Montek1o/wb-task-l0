@@ -903,6 +903,10 @@ h2 {
   background: url("../../assets/svg/like-hover.svg");
 }
 
+.count__like-active {
+  background: url("../../assets/svg/like-hover.svg");
+}
+
 .count__remove {
   background: url("../../assets/svg/trash.svg");
 }

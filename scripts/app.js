@@ -3,12 +3,16 @@ import renderMissProducts from "./basket/renderMissProducts";
 import modalPayController from "./modal/modalPayController";
 import modalDeliveryController from "./modal/modalDeliveryController";
 import accordion from "./basket/accordion";
+import deleteProduct from "./basket/deleteProduct";
+import likeProduct from "./basket/likeProduct";
 
 export default function app() {
   // basket
   renderProducts();
   renderMissProducts();
   accordion();
+  deleteProduct();
+  likeProduct();
 
   // modal
   modalPayController();
