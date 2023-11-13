@@ -7,6 +7,7 @@ import deleteProduct from "./basket/deleteProduct";
 import likeProduct from "./basket/likeProduct";
 import checkboxPay from "./total/checkboxPay";
 import validationForm from "./validation/validationForm";
+import selectedProduct from "./basket/selectedProduct";
 
 export default function app() {
   // basket
@@ -15,6 +16,7 @@ export default function app() {
   accordion();
   deleteProduct();
   likeProduct();
+  selectedProduct();
 
   // modal
   modalPayController();

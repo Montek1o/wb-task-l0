@@ -6,18 +6,19 @@ export default function renderProducts() {
   for (let i = 0; i < products.length; i++) {
     const product = document.createElement('div');
     product.className = 'list__item';
+    product.setAttribute('data-checked', true);
     product.innerHTML = `
     <div class="list__item__left-column">
       <label>
-        <input class="item__checkbox checkbox" type="checkbox">
+        <input class="item__checkbox checkbox" type="checkbox" checked>
         <span class="item__custom-checkbox custom-checkbox"></span>
       </label>
       ${products[i].size ? `<div class="additional__size-mobile">${products[i].size}</div>` : ''}
       <img class="item__photo" src="${products[i].photo}">
       <div class="item__description">
         <div class="item__price-mobile">
-          <p class="price__main">${products[i].price} сом</p>
-          <p class="price__full-price">${products[i].fullPrice} сом</p>
+          <p class="price__main"><span>${products[i].price}</span> сом</p>
+          <p class="price__full-price"><span>${products[i].fullPrice}</span> сом</p>
         </div>
         <p class="description__title-mobile">${products[i].nameMobile ? products[i].nameMobile : products[i].name}</p>
         <p class="description__title">${products[i].name}</p>
@@ -55,18 +56,16 @@ export default function renderProducts() {
         </div>
       </div>
       <div class="item__price">
-        ${products[i].price.length > 6 ? 
-        `<p class="price__main"><span class="large-number">${products[i].price}</span> сом</p>` : 
-        `<p class="price__main"><span class="large-number">${products[i].price}</span> сом</p>`}
-        <p class="price__full-price">${products[i].fullPrice} сом</p>
+        <p class="price__main"><span class="large-number">${products[i].price}</span> сом</p>
+        <p class="price__full-price"><span>${products[i].fullPrice}</span> сом</p>
         <div class="price__tooltip">
           <div class="price__tooltip__container">
             <p class="price__tooltip__title">${products[i].tooltipSale[0].name}</p>
-            <p class="price__tooltip__sum">−${Math.round(products[i].tooltipSale[0].value * +products[i].fullPrice.replaceAll(' ', ''))} сом</p>
+            <p class="price__tooltip__sum">−<span>${Math.round(products[i].tooltipSale[0].value * +products[i].fullPrice.replaceAll(' ', ''))}</span> сом</p>
           </div>
           <div class="price__tooltip__container">
             <p class="price__tooltip__title" style="color: rgba(151, 151, 175, 1);">${products[i].tooltipSale[1].name}</p>
-            <p class="price__tooltip__sum">−${Math.round(products[i].tooltipSale[1].value * +products[i].fullPrice.replaceAll(' ', ''))} сом</p>
+            <p class="price__tooltip__sum">−<span>${Math.round(products[i].tooltipSale[1].value * +products[i].fullPrice.replaceAll(' ', ''))}</span> сом</p>
           </div>
         </div>
       </div>

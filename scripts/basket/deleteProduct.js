@@ -1,3 +1,5 @@
+import totalUpdate from "../total/totalUpdate";
+
 export default function deleteProduct() {
   const deleteIcons = document.querySelectorAll('.count__remove');
 
@@ -6,6 +8,8 @@ export default function deleteProduct() {
       const product = e.target.closest('.list__item') || e.target.closest('.miss-list__item');
 
       product.remove();
+      totalUpdate();
     })
   })
+
 } 

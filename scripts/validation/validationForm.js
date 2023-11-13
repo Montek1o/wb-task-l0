@@ -28,11 +28,7 @@ export default function validationForm() {
     if (input.dataset.numberDigits) {
       if (input.value.length != input.dataset.numberDigits) {
         result = false;
-        if (input.classList.contains('telephone__input')) {
-          createError(input, 'Формат: +9 999 999 99 99');
-        } else {
-          createError(input, 'Проверьте ИНН (Должно быть 14 цифр)');
-        }
+        createError(input, 'Проверьте ИНН (Должно быть 14 цифр)');
       }
     }
 

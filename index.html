@@ -27,7 +27,7 @@
           <p class="icon-menu__text">Профиль</p>
         </div>
         <div class="icon-menu__item">
-          <div class="basket-count"><span>3</span></div>
+          <div class="basket-count"><span class="counter">3</span></div>
           <img class="basket-icon" src="./assets/svg/basket.svg" alt="basket-icon">
           <p class="icon-menu__text">Корзина</p>
         </div>
@@ -46,7 +46,7 @@
       <img src="./assets/svg/icon-menu/main.svg" alt="main">
       <img src="./assets/svg/icon-menu/catalog.svg" alt="catalog">
       <div style="position: relative;">
-        <div class="basket-count"><span>3</span></div>
+        <div class="basket-count"><span class="counter">3</span></div>
         <img src="./assets/svg/icon-menu/cart.svg" alt="cart">
       </div>
       <img src="./assets/svg/icon-menu/favorites.svg" alt="favoriets">
@@ -61,7 +61,7 @@
           <div class="basket__list">
             <div class="list__header accordion-button">
               <label class="list__all-button">
-                <input class="list__checkbox checkbox" type="checkbox">
+                <input class="list__checkbox checkbox" type="checkbox" checked>
                 <span class="list__custom-checkbox custom-checkbox"></span>
                 <span class="list__text">Выбрать все</span>
               </label>
@@ -182,7 +182,8 @@
                 <input 
                   class="telephone__input" 
                   type="text" 
-                  placeholder="Телефон" 
+                  placeholder="Телефон"
+                  onkeypress="return (event.charCode >= 48 && event.charCode <= 57 || event.charCode == 32 || event.charCode == 43)" 
                   data-empty-string="Укажите номер телефона" 
                 >
                 <p class="telephone__tag tag">Телефон</p>
