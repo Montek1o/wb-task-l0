@@ -6,6 +6,7 @@ import accordion from "./basket/accordion";
 import deleteProduct from "./basket/deleteProduct";
 import likeProduct from "./basket/likeProduct";
 import checkboxPay from "./total/checkboxPay";
+import validationForm from "./validation/validationForm";
 
 export default function app() {
   // basket
@@ -21,4 +22,7 @@ export default function app() {
 
   // total
   checkboxPay();
+
+  // validation 
+  validationForm();
 };

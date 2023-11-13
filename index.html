@@ -144,34 +144,59 @@
         </section>
         <section class="recipient">
           <h2 class="recipient__title">Получатель</h2>
-          <form class="recipient__form">
+          <form class="recipient__form" id="form">
             <div class="form__top">
               <div class="form__item">
-                <input class="name__input" type="text" placeholder="Имя">
+                <input 
+                  class="name__input"
+                  type="text" 
+                  placeholder="Имя" 
+                  data-empty-string="Укажите имя"
+                >
                 <p class="name__tag tag">Имя</p>
                 <p class="name__error error"></p>
               </div>
               <div class="form__item">
-                <input class="last-name__input" type="text" placeholder="Фамилия">
+                <input 
+                  class="last-name__input"
+                  type="text"
+                  placeholder="Фамилия"
+                  data-empty-string="Введите фамилию"
+                >
                 <p class="last-name__tag tag">Фамилия</p>
                 <p class="last-name__error error"></p>
               </div>
             </div>
             <div class="form__bottom">
               <div class="form__item">
-                <input class="mail__input-mobile" type="email" placeholder="Электронная почта">
-                <p class="mail__tag-mobile tag">Электронная почта</p>
-                <input class="mail__input" type="email" placeholder="Почта">
+                <input 
+                  class="mail__input" 
+                  type="email" 
+                  placeholder="Почта" 
+                  data-empty-string="Укажите электронную почту"
+                >
                 <p class="mail__tag tag">Почта</p>
                 <p class="mail__error error"></p>
               </div>
               <div class="form__item">
-                <input class="telephone__input" type="tel" placeholder="Телефон">
+                <input 
+                  class="telephone__input" 
+                  type="text" 
+                  placeholder="Телефон" 
+                  data-empty-string="Укажите номер телефона" 
+                >
                 <p class="telephone__tag tag">Телефон</p>
                 <p class="telephone__error error"></p>
               </div>
               <div class="form__item">
-                <input class="tax__input" placeholder="ИНН">
+                <input 
+                  class="tax__input" 
+                  type="text" 
+                  placeholder="ИНН" 
+                  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" 
+                  data-empty-string="Укажите ИНН" 
+                  data-number-digits="14"
+                >
                 <p class="tax__tag tag">ИНН для таможни</p>
                 <p class="tax__error error">Для таможенного оформления</p>
               </div>
@@ -233,7 +258,7 @@
               <p class="payment__refinements">Спишем оплату с карты при получении</p>
             </div>
           </div>
-          <button class="total__button">Заказать</button>
+          <button type="submit" class="total__button" form="form">Заказать</button>
           <div class="total__rules">
             <img src="./assets/svg/tick2.svg" alt="tick">
             <p>Соглашаюсь с <span>правилами пользования торговой площадкой</span> и <span>возврата</span></p>

@@ -1412,6 +1412,7 @@ h2 {
   margin-bottom: 4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
+  animation: 0.5s linear;
 }
 .recipient__form input::-moz-placeholder {
   font-size: 1.6rem;
@@ -1432,9 +1433,6 @@ h2 {
 }
 .recipient__form input:focus::placeholder {
   color: transparent;
-}
-.recipient__form input:focus + .tag {
-  color: rgb(151, 151, 175);
 }
 @media (max-width: 920px) {
   .recipient__form {
@@ -1481,6 +1479,13 @@ h2 {
   font-style: normal;
   height: 14px;
 }
+.form__item-error input {
+  color: rgb(245, 81, 35);
+  border-bottom: 1px solid rgb(245, 81, 35);
+}
+.form__item-error .error {
+  color: rgb(245, 81, 35);
+}
 @media (max-width: 920px) {
   .form__item .tag {
     font-size: 1.2rem;
@@ -1493,30 +1498,17 @@ h2 {
   }
 }
 
-.mail__input-mobile {
-  display: none;
-}
-@media (max-width: 920px) {
-  .mail__input {
-    display: none;
+@keyframes errorAnimation {
+  0% {
+    background: transparent;
   }
-  .mail__input-mobile {
-    display: block;
+  50% {
+    background: rgba(255, 55, 0, 0.179);
   }
-}
-
-.mail__tag-mobile {
-  display: none;
-}
-@media (max-width: 920px) {
-  .mail__tag {
-    display: none;
-  }
-  .mail__tag-mobile {
-    display: block;
+  100% {
+    background: transparent;
   }
 }
-
 .total {
   padding: 16px 24px 24px;
   border-radius: 16px;

@@ -34,6 +34,7 @@
     margin-bottom: 4px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     width: 100%;
+    animation: 0.5s linear;
   }
   
   input::placeholder {
@@ -43,10 +44,6 @@
 
   input:focus::placeholder {
     color: transparent;
-  }
-
-  input:focus + .tag {
-    color: rgba(151, 151, 175, 1);
   }
 
   @include media-mobile {
@@ -87,6 +84,17 @@
     height: 14px;
   }
 
+  &-error {
+    input {
+      color: rgba(245, 81, 35, 1);
+      border-bottom: 1px solid rgba(245, 81, 35, 1);
+    }
+
+    .error {
+      color: rgba(245, 81, 35, 1);
+    }
+  }
+
   @include media-mobile {
     .tag {
       @include font(1.2rem, 1.4rem);
@@ -98,30 +106,16 @@
   }
 }
 
-.mail__input {
-  &-mobile {
-    display: none;
+@keyframes errorAnimation {
+  0% {
+    background: transparent;
   }
 
-  @include media-mobile {
-    display: none;
-
-    &-mobile {
-      display: block;
-    }
-  }
-}
-
-.mail__tag {
-  &-mobile {
-    display: none;
+  50% {
+    background: rgba(255, 55, 0, 0.179);
   }
 
-  @include media-mobile {
-    display: none;
-
-    &-mobile {
-      display: block;
-    }
+  100% {
+    background: transparent;
   }
 }
