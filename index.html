@@ -27,7 +27,7 @@
           <p class="icon-menu__text">Профиль</p>
         </div>
         <div class="icon-menu__item">
-          <div class="basket-count"><span>3</span></div>
+          <div class="basket-count"><span class="counter">3</span></div>
           <img class="basket-icon" src="./assets/svg/basket.svg" alt="basket-icon">
           <p class="icon-menu__text">Корзина</p>
         </div>
@@ -46,7 +46,7 @@
       <img src="./assets/svg/icon-menu/main.svg" alt="main">
       <img src="./assets/svg/icon-menu/catalog.svg" alt="catalog">
       <div style="position: relative;">
-        <div class="basket-count"><span>3</span></div>
+        <div class="basket-count"><span class="counter">3</span></div>
         <img src="./assets/svg/icon-menu/cart.svg" alt="cart">
       </div>
       <img src="./assets/svg/icon-menu/favorites.svg" alt="favoriets">
@@ -59,21 +59,22 @@
         <section class="basket">
           <h2 class="basket__title">Корзина</h2>
           <div class="basket__list">
-            <div class="list__header">
-              <label>
-                <input class="list__checkbox checkbox" type="checkbox">
+            <div class="list__header accordion-button">
+              <label class="list__all-button">
+                <input class="list__checkbox checkbox" type="checkbox" checked>
                 <span class="list__custom-checkbox custom-checkbox"></span>
                 <span class="list__text">Выбрать все</span>
               </label>
-              <img src="./assets/svg/arrow.svg" alt="arrow">
+              <span class="list__total-text">203 товара · 2 101 063 сом</span>
+              <img class="arrow" src="./assets/svg/arrow.svg" alt="arrow">
             </div>
             <div class="list__body">
             </div>
           </div>
           <div class="basket__miss-list">
-            <div class="miss-list__header">
+            <div class="miss-list__header accordion-button">
               <span class="miss-list__text">Отсутствуют · 3 товара</span>
-              <img src="./assets/svg/arrow.svg" alt="arrow">
+              <img class="arrow" src="./assets/svg/arrow.svg" alt="arrow">
             </div>
             <div class="miss-list__body">
             </div>
@@ -82,12 +83,12 @@
         <section class="delivery">
           <div class="delivery__header">
             <h2 class="delivery__title">Способ доставки</h2>
-            <p class="delivery__edit">Изменить</p>
+            <p class="delivery__edit edit-delivery">Изменить</p>
           </div>
           <div class="delivery__point">
-            <p class="point__title">Пункт выдачи</p>
+            <p class="point__title type-delivery">Пункт выдачи</p>
             <div>
-              <p class="point__content">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+              <p class="point__content edit-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
               <p class="point__score"><img src="./assets/svg/star.svg" alt="star"><span>4.99</span>Ежедневно с 10 до 21 </p>
             </div>
           </div>
@@ -122,16 +123,20 @@
           </div>
           <div class="delivery__refund">
             <img class="refund__icon" src="./assets/svg/tick.svg" alt="tick">
-            <p class="refund__text">Обратная доставка товаров на склад при отказе —<span>бесплатно</span></p>
+            <p class="refund__text">
+              Обратная доставка товаров на склад при отказе —
+              <span class="tooltip-free">бесплатно</span>
+              <span class="tooltip-free__content">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</span>
+            </p>
           </div>
         </section>
         <section class="pay">
           <div class="pay__header">
             <h2 class="pay__title">Способ оплаты</h2>
-            <p class="pay__edit">Изменить</p>
+            <p class="pay__edit edit-pay">Изменить</p>
           </div>
           <div class="pay__card">
-            <img class="card__img" src="./assets/svg/card/mir.svg" alt="card">
+            <img class="card-type" src="./assets/svg/card/mir.svg" alt="card">
             <p class="card__number">1234 56•• •••• 1234</p>
             <p class="card__data">01/30</p>
           </div>
@@ -139,34 +144,60 @@
         </section>
         <section class="recipient">
           <h2 class="recipient__title">Получатель</h2>
-          <form class="recipient__form">
+          <form class="recipient__form" id="form">
             <div class="form__top">
               <div class="form__item">
-                <input class="name__input" type="text" placeholder="Имя">
+                <input 
+                  class="name__input"
+                  type="text" 
+                  placeholder="Имя" 
+                  data-empty-string="Укажите имя"
+                >
                 <p class="name__tag tag">Имя</p>
                 <p class="name__error error"></p>
               </div>
               <div class="form__item">
-                <input class="last-name__input" type="text" placeholder="Фамилия">
+                <input 
+                  class="last-name__input"
+                  type="text"
+                  placeholder="Фамилия"
+                  data-empty-string="Введите фамилию"
+                >
                 <p class="last-name__tag tag">Фамилия</p>
                 <p class="last-name__error error"></p>
               </div>
             </div>
             <div class="form__bottom">
               <div class="form__item">
-                <input class="mail__input-mobile" type="email" placeholder="Электронная почта">
-                <p class="mail__tag-mobile tag">Электронная почта</p>
-                <input class="mail__input" type="email" placeholder="Почта">
+                <input 
+                  class="mail__input" 
+                  type="email" 
+                  placeholder="Почта" 
+                  data-empty-string="Укажите электронную почту"
+                >
                 <p class="mail__tag tag">Почта</p>
                 <p class="mail__error error"></p>
               </div>
               <div class="form__item">
-                <input class="telephone__input" type="tel" placeholder="Телефон">
+                <input 
+                  class="telephone__input" 
+                  type="text" 
+                  placeholder="Телефон"
+                  onkeypress="return (event.charCode >= 48 && event.charCode <= 57 || event.charCode == 32 || event.charCode == 43)" 
+                  data-empty-string="Укажите номер телефона" 
+                >
                 <p class="telephone__tag tag">Телефон</p>
                 <p class="telephone__error error"></p>
               </div>
               <div class="form__item">
-                <input class="tax__input" placeholder="ИНН">
+                <input 
+                  class="tax__input" 
+                  type="text" 
+                  placeholder="ИНН" 
+                  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" 
+                  data-empty-string="Укажите ИНН" 
+                  data-number-digits="14"
+                >
                 <p class="tax__tag tag">ИНН для таможни</p>
                 <p class="tax__error error">Для таможенного оформления</p>
               </div>
@@ -179,7 +210,7 @@
           <div>
             <div class="total__header">
               <h2 class="total__title">Итого</h2>
-              <p class="total__amount"><span>2 101 063</span> сом</p>
+              <p class="total__amount"><span>805 716</span> сом</p>
             </div>
             <div class="total__row">
               <p class="total__products">203 товара</p>
@@ -187,7 +218,7 @@
             </div>
             <div class="total__row">
               <p class="total__sale">Скидка</p>
-              <p class="total__sale-sum">−200 985 сом</p>
+              <p class="total__sale-sum">−1 496 332 сом</p>
             </div>
             <div class="total__row">
               <p>Доставка</p>
@@ -196,35 +227,39 @@
           </div>
           <div class="total__extradition">
             <div class="extradition__header">
-              <p class="extradition__title">Доставка в пункт выдачи</p>
-              <img class="extradition__edit" src="./assets/svg/pencil.svg" alt="edit-button">
+              <p class="extradition__title type-delivery">Доставка в пункт выдачи</span></p>
+              <img class="extradition__edit edit-delivery" src="./assets/svg/pencil.svg" alt="edit-button">
             </div>
-            <p class="extradition__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+            <p class="extradition__address edit-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
             <p class="extradition__date">5–8 фев</p>
             <div class="extradition__refund">
               <img class="refund__icon" src="./assets/svg/tick.svg" alt="tick">
-              <p class="refund__text">Обратная доставка товаров на склад при отказе — <span>бесплатно</span></p>
+              <p class="refund__text">
+                Обратная доставка товаров на склад при отказе — 
+                <span class="tooltip-free">бесплатно</span>
+                <span class="tooltip-free__content">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</span>
+              </p>
             </div>
           </div>
           <div class="total__payment">
             <div class="payment__header">
               <p class="payment__title">Оплата картой</p>
-              <img class="payment__edit" src="./assets/svg/pencil.svg" alt="edit-button">
+              <img class="payment__edit edit-pay" src="./assets/svg/pencil.svg" alt="edit-button">
             </div>
             <div class="payment__card">
-              <img src="./assets/svg/card/mir.svg" alt="card">
+              <img class="card-type" src="./assets/svg/card/mir.svg" alt="card">
               <p>1234 12•• •••• 1234</p>
             </div>
             <div class="payment__checkbox">
               <label class="checkbox__container">
-                <input class="payment-checkbox checkbox" type="checkbox">
+                <input class="payment-checkbox checkbox" type="checkbox" name="payment-checkbox">
                 <span class="custom-checkbox"></span>
                 Списать оплату сразу
               </label>
-              <p>Спишем оплату с карты при получении</p>
+              <p class="payment__refinements">Спишем оплату с карты при получении</p>
             </div>
           </div>
-          <button class="total__button">Заказать</button>
+          <button type="submit" class="total__button" form="form">Заказать</button>
           <div class="total__rules">
             <img src="./assets/svg/tick2.svg" alt="tick">
             <p>Соглашаюсь с <span>правилами пользования торговой площадкой</span> и <span>возврата</span></p>
@@ -236,6 +271,130 @@
   <footer class="footer">
     <p class="footer__text">© 2022 ООО «Товары и точка»</p>
   </footer>
+  <div class="modal-pay">
+    <div class="modal-pay__container">
+      <div class="modal-pay__header">
+        <p>Способ оплаты</p>
+        <img class="modal-pay__close" src="./assets/svg/modal/close.svg" alt="close">
+      </div>
+      <div class="modal-pay__content">
+        <label>
+          <input class="radio" type="radio" name="pay-card" value="mir" checked>
+          <span class="custom-radio"></span>
+          <img src="./assets/svg/card/mir.svg" alt="card-mir">
+          1234 56•• •••• 1234
+        </label>
+        <label>
+          <input class="radio" type="radio" name="pay-card" value="visa">
+          <span class="custom-radio"></span>
+          <img src="./assets/svg/card/visa.svg" alt="card-visa">
+          1234 56•• •••• 1234
+        </label>
+        <label>
+          <input class="radio" type="radio" name="pay-card" value="mastercard">
+          <span class="custom-radio"></span>
+          <img src="./assets/svg/card/mastercard.svg" alt="card-mastercard">
+          1234 56•• •••• 1234
+        </label>
+        <label>
+          <input class="radio" type="radio" name="pay-card" value="maestro">
+          <span class="custom-radio"></span>
+          <img src="./assets/svg/card/maestro.svg" alt="card-maestro">
+          1234 56•• •••• 1234
+        </label>
+      </div>
+      <div class="modal-pay__footer">
+        <button class="modal-pay__button">Выбрать</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-delivery">
+    <div  class="modal-delivery__container">
+      <div class="modal-delivery__header">
+        <p>Способ доставки</p>
+        <img class="modal-delivery__close" src="./assets/svg/modal/close.svg" alt="close">
+      </div>
+      <div class="modal-delivery__content">
+        <div class="modal-delivery__way">
+          <label class="way__item">
+            <input class="way__radio" type="radio" name="way" value="в пункт выдачи" checked>
+            В пункт выдачи
+          </label>
+          <label class="way__item">
+            <input class="way__radio" type="radio" name="way" value="курьером">
+            Курьером
+          </label>
+        </div>
+        <div class="modal-delivery__addresses">
+          <p class="addresses__title">Мои адреса</p>
+          <div class="addresses__container addresses__courier">
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-courier" value="Бишкек, улица Табышалиева, 57" checked>
+                <span class="custom-radio"></span>
+                <p class="address__name">Бишкек, улица Табышалиева, 57</p>
+              </label>
+              <div class="address-delete"></div>
+            </div>
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-courier" value="Бишкек, улица Жукеева-Пудовкина, 77/1">
+                <span class="custom-radio"></span>
+                <p class="address__name">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+              </label>
+              <div class="address-delete"></div>
+            </div>
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-courier" value="Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1">
+                <span class="custom-radio"></span>
+                <p class="address__name">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
+              </label>
+              <div class="address-delete"></div>
+            </div>
+          </div>
+          <div class="addresses__container addresses__point">
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-point" value="г. Бишкек, улица Ахматбека Суюмбаева, 12/1" checked>
+                <span class="custom-radio"></span>
+                <div>
+                  <p class="address__name">г. Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <p class="address__estimation"><img src="./assets/svg/star.svg"><span>4.99</span>Пункт выдачи</p>
+                </div>
+              </label>
+              <div class="address-delete"></div>
+            </div>
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-point" value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1">
+                <span class="custom-radio"></span>
+                <div>
+                  <p class="address__name">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                  <p class="address__estimation"><img src="./assets/svg/star.svg"><span>4.99</span>Пункт выдачи</p>
+                </div>
+              </label>
+              <div class="address-delete"></div>
+            </div>
+            <div class="addresses__item">
+              <label>
+                <input class="radio" type="radio" name="addresses-point" value="г. Бишкек, улица Табышалиева, д. 57">
+                <span class="custom-radio"></span>
+                <div>
+                  <p class="address__name">г. Бишкек, улица Табышалиева, д. 57</p>
+                  <p class="address__estimation"><img src="./assets/svg/star.svg"><span>4.99</span>Пункт выдачи</p>
+                </div>
+              </label>
+              <div class="address-delete"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-delivery__footer">
+        <button class="modal-delivery__button">Выбрать</button>
+      </div>
+    </div>
+  </div>
   <script type="module" src="./main.js"></script>
 </body>
 </html>

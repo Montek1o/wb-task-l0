@@ -63,6 +63,10 @@
   @include font(1.6rem, 2.4rem, 700);
 }
 
+.extradition__edit {
+  cursor: pointer;
+}
+
 .extradition__address {
   @include font(1.3rem, 1.6rem, 400);
   margin: 4px 0;
@@ -96,11 +100,43 @@
     }
   }
 
+  .tooltip-free__content {
+    top: 40px;
+    left: -36px;
+  }
+
+  @media (max-width: 1054px) {
+    .tooltip-free__content {
+      top: 40px;
+      left: -60px;
+    }
+  }
+
+  @media (max-width: 994px) {
+    .tooltip-free__content {
+      top: 55px;
+      left: -80px;
+    }
+  }
+
+  
   @include media-mobile {
     background-color: rgba(240, 236, 244, 1);
-
+    
     .refund__text {
       margin-top: 2px;
+    }
+    
+    .tooltip-free__content {
+      top: 28px;
+      left: 80px;
+    }
+  }
+  
+  @media (max-width: 449px) {
+    .tooltip-free__content {
+      top: 40px;
+      left: -37px;
     }
   }
 }
@@ -120,6 +156,10 @@
 
 .payment__title {
   @include font(1.6rem, 2.4rem, 700);
+}
+
+.payment__edit {
+  cursor: pointer;
 }
 
 .payment__card {
@@ -149,7 +189,10 @@
   display: flex;
   align-items: center;
   column-gap: 8px;
-  margin-bottom: 8px;
+}
+
+.payment__refinements {
+  margin-top: 8px;
 }
 
 .total__button {
@@ -162,7 +205,16 @@
   height: 44px;
   padding: 0 32px 5px;
   margin-bottom: 12px;
+  @extend %transition;
   cursor: pointer;
+
+  &:hover {
+    background-color: rgb(230, 20, 195);
+  }
+
+  &:active {
+    background-color: rgba(179, 15, 151, 1);
+  }
 }
 
 .total__rules {
@@ -176,6 +228,7 @@
 
   span {
     border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    cursor: pointer;
   }
 
   @include media-tablet {
