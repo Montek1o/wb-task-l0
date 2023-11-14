@@ -308,6 +308,7 @@
     letter-spacing: -0.2px;
     width: 24px;
     padding: 2px 7px 6px 8px;
+    cursor: pointer;
 
     @include media-mobile {
       padding: 0;
@@ -315,8 +316,6 @@
   }
 
   .count__minus {
-    color: rgba(0, 0, 0, 0.2);
-
     @include media-mobile {
       padding: 2.667px 5px 8px 10px;
     }

@@ -818,14 +818,12 @@ h2 {
   letter-spacing: -0.2px;
   width: 24px;
   padding: 2px 7px 6px 8px;
+  cursor: pointer;
 }
 @media (max-width: 920px) {
   .count__container .count__minus, .count__container .count__plus {
     padding: 0;
   }
-}
-.count__container .count__minus {
-  color: rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 920px) {
   .count__container .count__minus {

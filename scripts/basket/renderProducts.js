@@ -45,11 +45,17 @@ export default function renderProducts() {
     <div class="list__item__right-column">
       <div class="item__count">
         <div class="count__container">
-          <span class="count__minus">−</span>
-          <span class="count__number">${products[i].count}</span>
-          <span class="count__plus">+</span>
+          ${products[i].count < 2 ? 
+            `<span class="count__minus" style="color: rgba(0, 0, 0, 0.2); pointer-events: none;">−</span>` : 
+            `<span class="count__minus">−</span>`
+          }
+          <span class="count__number" data-price-per-unit=${products[i].pricePerUnit}>${products[i].count}</span>
+          ${products[i].count == products[i].stock ? 
+            `<span class="count__plus" style="color: rgba(0, 0, 0, 0.2); pointer-events: none;">+</span>` : 
+            `<span class="count__plus">+</span>`
+          }
         </div>
-        ${products[i].stock ? `<p class="count__stock">Осталось ${products[i].stock} шт.</p>` : ''}
+        ${products[i].stock ? `<p class="count__stock">Осталось <span>${products[i].stock}</span> шт.</p>` : ''}
         <div class="count__buttons">
           <div class="count__like" src="./assets/svg/like.svg" alt="like"></div>
           <div class="count__remove" src="./assets/svg/trash.svg" alt="remove"></div>
@@ -61,11 +67,11 @@ export default function renderProducts() {
         <div class="price__tooltip">
           <div class="price__tooltip__container">
             <p class="price__tooltip__title">${products[i].tooltipSale[0].name}</p>
-            <p class="price__tooltip__sum">−<span>${Math.round(products[i].tooltipSale[0].value * +products[i].fullPrice.replaceAll(' ', ''))}</span> сом</p>
+            <p class="price__tooltip__sum">−<span class="sale-one">${Math.round(products[i].tooltipSale[0].value * +products[i].fullPrice.replaceAll(' ', ''))}</span> сом</p>
           </div>
           <div class="price__tooltip__container">
             <p class="price__tooltip__title" style="color: rgba(151, 151, 175, 1);">${products[i].tooltipSale[1].name}</p>
-            <p class="price__tooltip__sum">−<span>${Math.round(products[i].tooltipSale[1].value * +products[i].fullPrice.replaceAll(' ', ''))}</span> сом</p>
+            <p class="price__tooltip__sum">−<span class="sale-two">${Math.round(products[i].tooltipSale[1].value * +products[i].fullPrice.replaceAll(' ', ''))}</span> сом</p>
           </div>
         </div>
       </div>

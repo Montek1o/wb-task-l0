@@ -12,6 +12,7 @@ export const products = [
     count: 1,
     stock: 2,
     price: '368',
+    pricePerUnit: 1051,
     fullPrice: '1051',
     tooltipSale: [
       {
@@ -40,6 +41,7 @@ export const products = [
     count: 200,
     stock: null,
     price: '805 016',
+    pricePerUnit: 11500,
     fullPrice: '2 300 047',
     tooltipSale: [
       {
@@ -68,6 +70,7 @@ export const products = [
     count: 2,
     stock: 2,
     price: '332',
+    pricePerUnit: 475,
     fullPrice: '950',
     tooltipSale: [
       {

@@ -8,6 +8,7 @@ import likeProduct from "./basket/likeProduct";
 import checkboxPay from "./total/checkboxPay";
 import validationForm from "./validation/validationForm";
 import selectedProduct from "./basket/selectedProduct";
+import counterProduct from "./basket/counterProduct";
 
 export default function app() {
   // basket
@@ -17,6 +18,7 @@ export default function app() {
   deleteProduct();
   likeProduct();
   selectedProduct();
+  counterProduct();
 
   // modal
   modalPayController();

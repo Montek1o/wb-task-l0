@@ -7,7 +7,7 @@ export default function updateSale() {
     const parent = sale.closest('.list__item');
 
     if (parent.getAttribute('data-checked') == 'true') {
-      sum += Number(sale.textContent);
+      sum += Math.round(+sale.textContent);
     }
   })
 
