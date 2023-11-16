@@ -160,6 +160,8 @@
 
 .payment__edit {
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 .payment__card {
@@ -189,6 +191,11 @@
   display: flex;
   align-items: center;
   column-gap: 8px;
+
+  .custom-checkbox {
+    position: relative;
+    z-index: 10;
+  }
 }
 
 .payment__refinements {

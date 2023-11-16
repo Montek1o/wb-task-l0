@@ -1180,6 +1180,9 @@ h2 {
     margin-bottom: 12px;
   }
 }
+.delivery__date-additional {
+  display: none;
+}
 
 .point__title {
   font-size: 1.6rem;
@@ -1296,6 +1299,7 @@ h2 {
 
 .tooltip-free:hover + .tooltip-free__content {
   opacity: 1;
+  z-index: 100;
 }
 
 .refund__icon {
@@ -1689,6 +1693,8 @@ h2 {
 
 .payment__edit {
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 .payment__card {
@@ -1728,6 +1734,10 @@ h2 {
   align-items: center;
   -moz-column-gap: 8px;
        column-gap: 8px;
+}
+.checkbox__container .custom-checkbox {
+  position: relative;
+  z-index: 10;
 }
 
 .payment__refinements {

@@ -9,6 +9,7 @@ import checkboxPay from "./total/checkboxPay";
 import validationForm from "./validation/validationForm";
 import selectedProduct from "./basket/selectedProduct";
 import counterProduct from "./basket/counterProduct";
+import deliveryCounter from "./delivery/deliveryCounter";
 
 export default function app() {
   // basket
@@ -29,4 +30,7 @@ export default function app() {
 
   // validation 
   validationForm();
+
+  // delivery
+  deliveryCounter();
 };

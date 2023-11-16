@@ -11,5 +11,5 @@ export default function updateSale() {
     }
   })
 
-  sum == 0 ? totalSale.textContent = `${sum} сом` : totalSale.textContent = `−${sum} сом`;
+  sum == 0 ? totalSale.textContent = `${sum} сом` : totalSale.textContent = `−${(sum).toLocaleString()} сом`;
 }

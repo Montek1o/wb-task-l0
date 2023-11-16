@@ -2,6 +2,7 @@ export default function updateNumberProducts() {
   const fullPrice = document.querySelector('.total__products-sum');
   const fullPricesProduct = document.querySelectorAll('.price__full-price span');
   const totalProducts = document.querySelector('.total__products');
+  const totalProductsAccordion = document.querySelector('.total-text__products');
   const countNumber = document.querySelectorAll('.count__number');
   let sumPrice = 0;
   let sumProducts = 0;
@@ -21,6 +22,7 @@ export default function updateNumberProducts() {
     }
   })
 
-  fullPrice.textContent = `${sumPrice / 2} сом`;
+  fullPrice.textContent = `${(sumPrice / 2).toLocaleString()} сом`;
   totalProducts.textContent = `${sumProducts} товара`;
+  totalProductsAccordion.textContent = `${sumProducts}`;
 }
