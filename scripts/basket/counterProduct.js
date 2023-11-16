@@ -1,3 +1,4 @@
+import deliveryCounter from "../delivery/deliveryCounter";
 import totalUpdate from "../total/totalUpdate";
 
 export default function counterProduct() {
@@ -37,6 +38,8 @@ export default function counterProduct() {
         elem.style.pointerEvents = 'none';
         elem.style.color = 'rgba(0, 0, 0, 0.2)';
       }
+
+      deliveryCounter();
       totalUpdate();
     }
 
@@ -76,6 +79,8 @@ export default function counterProduct() {
         plus.style.pointerEvents = 'auto';
         plus.style.color = 'rgba(0, 0, 0, 1)';
       }
+
+      deliveryCounter();
       totalUpdate();
     }
 
